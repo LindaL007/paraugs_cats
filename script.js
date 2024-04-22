@@ -5,10 +5,11 @@ let zinas = dokoment.querySelector('.cataZina');
 function sutitZinu()
 {
     console.log('sutitZinu()darbojas');
-    zinas.innerHTML = zinas.innerHTML+ '<br>' +zina.value;
+    zinas.innerHTML = zinas.innerHTML+ '<br>' + zina.value;
 }
-function ieladeChataZinas()
+async function ieladeChataZinas()
 {
     let datiNoServera = await fetch('chataZinas.txt');
     let dati = await datiNoServera.text;
+    console.log(dati);
 }
